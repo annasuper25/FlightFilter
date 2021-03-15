@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.util.List;
 
 import static com.gridnine.testing.Main.*;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
 
 public class FilterTest {
 

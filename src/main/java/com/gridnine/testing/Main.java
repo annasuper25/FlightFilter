@@ -34,19 +34,19 @@ public class Main {
         List<Flight> flights = FlightBuilder.createFlights();
         Filter filter = new Filter();
 
-        System.out.println(" ------ Начальный набор перелетов: ------ ");
+        System.out.println(" ------ initial flights ------ ");
         flights.forEach(System.out::println);
 
         flights = filter.clean(flights, DEPARTURE_DATE_AFTER_NOW);
-        System.out.println(" ------ Исключили перелеты с вылетом до текущего момента времени: ------ ");
+        System.out.println(" ------ after deleting flights with departures before the current time ------ ");
         flights.forEach(System.out::println);
 
         flights = filter.clean(flights, DEPARTURE_DATE_BEFORE_ARRIVAL_DATE);
-        System.out.println(" ------ Исключили перелеты, где имеются сегменты с датой прилёта раньше даты вылета: ------ ");
+        System.out.println(" ------ after deleting flights where segments with arrival date earlier than the departure date ------ ");
         flights.forEach(System.out::println);
 
         flights = filter.clean(flights, DOWNTIME_MORE_THAN_2_HOURS);
-        System.out.println(" ------ Исключили перелеты, у которых общее время, проведённое на земле, превышает два часа: ------ ");
+        System.out.println(" ------ after deleting flights where the total time on earth more then 2 hours ------ ");
         flights.forEach(System.out::println);
     }
 }
