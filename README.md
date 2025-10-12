@@ -1,2 +1,2 @@
 # FlightFilter
-Фильтрация набора авиа перелётов по различным правилам
+Filtering a set of flights according to various rules
